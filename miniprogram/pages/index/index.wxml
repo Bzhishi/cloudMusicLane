@@ -45,7 +45,7 @@
         <view class="recommend_song">
           <view class="recommend_song_item" wx:for="{{recomSongList}}" wx:key="item">
             <view class="recommend_song_img">
-              <image src="{{item.picUrl}}" bindtap="openSongSheet" mode="widthFix" />
+              <image src="{{item.picUrl}}" bindtap="openSongSheet" data-id="{{item.id}}" mode="widthFix" />
               <view class="songList_info">
                 <view class="play_count_wrap">
                   <text class="iconfont icon-play" style="font-size: 32rpx"></text>

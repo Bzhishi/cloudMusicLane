@@ -133,7 +133,14 @@ Page({
 
   // 获取推荐歌单
 
-
+  // 进去歌单详情页面
+  openSongSheet(e){
+    var that = this;
+    let id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `../songListDetail/index?id=${id}&type=0`
+    })
+  },
 
   onGetUserInfo: function(e) {
     if (!this.data.logged && e.detail.userInfo) {

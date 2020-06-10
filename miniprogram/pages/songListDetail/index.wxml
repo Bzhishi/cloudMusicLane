@@ -1,0 +1,24 @@
+<view >
+  <image src="{{playlist.coverImgUrl}}" />
+  <text>{{playlist.name}}</text>
+  <image src="{{playlist.creator.avatarUrl}}" />
+  <text>{{playlist.creator.nickname}}</text>
+  <view class="iconfont icon-jiankuohaoxiyou" style="color:#F5F5F5;line-height: 73rpx;font-size:35rpx;"></view>
+  <view >{{playlist.description!=null?playlist.description:""}}</view>
+  <view class="menu_item">
+    <view class="iconfont icon-pinglun" style="font-size:60rpx;color:white;margin-left: 10rpx;"></view>
+    <view class="menu_title">{{playlist.commentCount}}</view>
+  </view>
+  <view class="menu_item">
+    <view class="iconfont icon-fenxiang" style="font-size:60rpx;color:white"></view>
+    <view class="menu_title">{{playlist.shareCount}}</view>
+  </view>
+  <view class="menu_item">
+    <view class="iconfont icon-duoxuan" style="font-size:60rpx;color:white"></view>
+    <view class="menu_title">多选</view>
+  </view>
+  <view class="menu_item">
+    <view class="iconfont icon-xiazai" style="font-size:60rpx;color:white"></view>
+    <view class="menu_title">下载</view>
+  </view>
+</view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/songListDetail/index",
     "pages/index/index",
     "components/songDetail/sDetail"
   ],
