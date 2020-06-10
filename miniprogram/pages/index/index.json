@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mineCom": "../../components/mineCom/mine",
+    "findCom": "../../components/findCom/index",
+    "vidioCom": "../../components/vidioCom/index"
+  }
+}

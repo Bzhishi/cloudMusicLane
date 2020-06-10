@@ -1,0 +1,5 @@
+<view class="">
+  <view class="" hover-class="none" hover-stop-propagation="false">
+    view
+  </view>
+</view>

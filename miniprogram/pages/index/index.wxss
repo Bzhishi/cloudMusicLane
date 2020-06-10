@@ -1,0 +1,158 @@
+Page {
+  background: white;
+}
+
+.header {
+  position: relative;
+}
+
+.header .nav {
+  white-space: nowrap;
+  padding: 5rpx 0;
+  text-align: center;
+}
+
+.header .nav .nav_item {
+  padding: 20rpx 20rpx;
+  font-size: 32rpx;
+  display: inline-block;
+}
+
+.header .nav .nav_active {
+  padding: 20rpx 45rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+  color: black;
+  display: inline-block;
+}
+
+.header .menuBtn, .header .searchBtn {
+  position: absolute;
+  top: 36rpx;
+}
+
+.header .searchBtn {
+  position: absolute;
+  top: 36rpx;
+}
+
+.header .menuBtn {
+  left: 30rpx;
+}
+
+.header .searchBtn {
+  right: 30rpx;
+}
+
+.swiper {
+  height: calc(100vh - 100rpx);
+}
+
+.swiper swiper-item {
+  overflow: auto;
+}
+
+.fenlei {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fenlei .fenlei_item .fenlei_icon {
+  border-radius: 50%;
+  background: #3c9;
+  font-size: 0;
+  height: 110rpx;
+  line-height: 110rpx;
+  text-align: center;
+  width: 110rpx;
+}
+
+.fenlei .fenlei_item .fenlei_icon view {
+  font-size: 50rpx;
+  color: white;
+}
+
+.fenlei .fenlei_item text {
+  text-align: center;
+  display: block;
+  padding: 10rpx 0;
+}
+
+.recommend_song_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25rpx;
+}
+
+.recommend_song_title .title_left {
+  padding: 20rpx 0;
+  font-size: 40rpx;
+  font-weight: 800;
+}
+
+.recommend_song_title .title_right {
+  border-radius: 15rpx;
+  border: 1rpx solid #ccc;
+  width: 140rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  text-align: center;
+}
+
+.recommend_song {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 15rpx;
+  box-sizing: border-box;
+}
+
+.recommend_song .recommend_song_item {
+  width: 30%;
+}
+
+.recommend_song .recommend_song_item .recommend_song_img {
+  position: relative;
+}
+
+.recommend_song .recommend_song_item .recommend_song_img image {
+  border-radius: 15rpx;
+  width: 224rpx;
+}
+
+.recommend_song .recommend_song_item .recommend_song_img .songList_info {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.recommend_song .recommend_song_item .recommend_song_img .songList_info .play_count_wrap {
+  padding-right: 10rpx;
+  box-sizing: border-box;
+}
+
+.recommend_song .recommend_song_item .recommend_song_img .songList_info .play_count_wrap text {
+  color: white;
+  display: inline-block;
+}
+
+.recommend_song .recommend_song_item .song_name {
+  font-size: 28rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+button:not([size='mini']) {
+  min-height: auto !important;
+  width: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="content_box">
+  <view class="header">
+    <scroll-view class="nav" scroll-x="{{true}}">
+      <view class="{{currentTab==0 ? 'nav_active' : 'nav_item'}}" data-current="0" bindtap="swichNav">我的</view>
+      <view class="{{currentTab==1 ? 'nav_active' : 'nav_item'}}" data-current="1" bindtap="swichNav">发现</view>
+      <view class="{{currentTab==2 ? 'nav_active' : 'nav_item'}}" data-current="2" bindtap="swichNav">朋友</view>
+      <view class="{{currentTab==3 ? 'nav_active' : 'nav_item'}}" data-current="3" bindtap="swichNav">视频</view>
+    </scroll-view>
+    <view class="menuBtn iconfont icon-caidan1" bindtap="openSearch" style="color: black; font-size: 36rpx"></view>
+    <view class="searchBtn iconfont icon-sousuo" bindtap="openSearch" style="color: black; font-size: 36rpx"></view>
+  </view>
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item>
+      <mineCom></mineCom>
+    </swiper-item>
+    <swiper-item>
+      <view class="index_box">
+        <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="#0081ff">
+          <swiper-item wx:for="{{banners}}" wx:key="item" class="{{cardCur==index?'cur':''}}">
+            <view class="swiper-item" bind:tap="songDetail" data-url="{{item.url}}">
+              <image src="{{item.picUrl}}" mode="aspectFill"></image>
+              <!-- <video src="{{item.picUrl}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video> -->
+            </view>
+          </swiper-item>
+        </swiper>
+        <view class="fenlei">
+          <view class="fenlei_item" wx:for="{{fenleiList}}" wx:key="item">
+            <view class="fenlei_icon">
+              <view class="{{item.icon}}"></view>
+            </view>
+            <text >{{item.text}}</text>
+          </view>
+        </view>
+
+        <!-- 推荐歌单 -->
+        <view class="recommend_song_title">
+          <view class="title_left recommend_title">
+            <text class="">推荐歌单</text>
+          </view>
+          <view class="title_right">
+            <text class="">歌单广场</text>
+          </view>
+        </view>
+        <view class="recommend_song">
+          <view class="recommend_song_item" wx:for="{{recomSongList}}" wx:key="item">
+            <view class="recommend_song_img">
+              <image src="{{item.picUrl}}" bindtap="openSongSheet" mode="widthFix" />
+              <view class="songList_info">
+                <view class="play_count_wrap">
+                  <text class="iconfont icon-play" style="font-size: 32rpx"></text>
+                  <text class="play_count">{{item.playCount}}万</text>
+                </view>
+              </view>
+            </view>
+            <view class="song_name">{{item.name}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--  -->
+    </swiper-item>
+    <swiper-item>
+      <findCom></findCom>
+    </swiper-item>
+    <swiper-item>
+      <vidioCom></vidioCom>
+    </swiper-item>
+  </swiper>
+</view>
