@@ -27,14 +27,14 @@ Page({
       icon: 'iconfont icon-zhibo',
       text: '直播'
     }],
-    currentTab: 1,
+    currentTab: 0,
     icon: 'iconfont icon-sousuo',
     limit: 6,
     recomSongList: []
   },
 
   onLoad: function() {
-    console.log(app)
+    // console.log(app)
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
@@ -84,7 +84,7 @@ Page({
         "content-type": "application/json"
       },
       success: res => {
-        console.log(res)
+        // console.log(res)
         let result = res.data.result;
         result.forEach((item) => {
           item.playCount = (item.playCount / 10000).toFixed(1);
@@ -126,7 +126,7 @@ Page({
     wx.request({
       url: 'https://musicapi.leanapp.cn/song/detail?' + id,
       success: res => {
-        console.log(res)
+        // console.log(res)
       }
     })
   },
@@ -135,7 +135,7 @@ Page({
 
   // 进去歌单详情页面
   openSongSheet(e){
-    var that = this;
+    // var that = this;
     let id = e.currentTarget.dataset.id
     wx.navigateTo({
       url: `../songListDetail/index?id=${id}&type=0`

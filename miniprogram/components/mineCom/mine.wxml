@@ -1,1 +1,13 @@
-<text >我的(待开发页面)</text>
+<view class="" wx:if="{{isShow}}">
+  <text class="">亲, 你还没有登录, 请先 登录 / 注册</text>
+  <form class="" bindsubmit="submit">
+    <input placeholder="请输入手机号/邮箱/账号" value="{{username}}" bindblur="inp_username" />
+    <input placeholder="请输入密码" value="{{password}}" bindblur="inp_password" password="{{true}}" />
+    <button type="submit" class="" bindtap="loginBtn">登录</button>
+  </form>
+</view>
+
+
+<view wx:else>
+  <view >少年，你已经登录，自己玩吧！</view>
+</view>

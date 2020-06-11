@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/songListDetail/index",
     "pages/index/index",
-    "components/songDetail/sDetail"
+    "components/songDetail/sDetail",
+    "pages/songListDetail/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

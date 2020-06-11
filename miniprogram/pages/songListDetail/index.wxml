@@ -1,24 +1,47 @@
 <view >
-  <image src="{{playlist.coverImgUrl}}" />
-  <text>{{playlist.name}}</text>
-  <image src="{{playlist.creator.avatarUrl}}" />
-  <text>{{playlist.creator.nickname}}</text>
-  <view class="iconfont icon-jiankuohaoxiyou" style="color:#F5F5F5;line-height: 73rpx;font-size:35rpx;"></view>
-  <view >{{playlist.description!=null?playlist.description:""}}</view>
-  <view class="menu_item">
-    <view class="iconfont icon-pinglun" style="font-size:60rpx;color:white;margin-left: 10rpx;"></view>
-    <view class="menu_title">{{playlist.commentCount}}</view>
-  </view>
-  <view class="menu_item">
-    <view class="iconfont icon-fenxiang" style="font-size:60rpx;color:white"></view>
-    <view class="menu_title">{{playlist.shareCount}}</view>
-  </view>
-  <view class="menu_item">
-    <view class="iconfont icon-duoxuan" style="font-size:60rpx;color:white"></view>
-    <view class="menu_title">多选</view>
-  </view>
-  <view class="menu_item">
-    <view class="iconfont icon-xiazai" style="font-size:60rpx;color:white"></view>
-    <view class="menu_title">下载</view>
+  <view class="play_list_bg" style="background: url({{playlist.coverImgUrl}});"></view>
+  <view class="main">
+
+    <view class="title_wrap">
+      <view class="photo">
+        <image mode="widthFix" src="{{playlist.coverImgUrl}}" />
+      </view>
+
+      <view class="content">
+        <view class="content_title">{{playlist.name}}</view>
+        <view class="content_info">
+          <view class="content_headPictrue">
+            <image src="{{playlist.creator.avatarUrl}}" />
+          </view>
+          <view class="content_nickname">{{playlist.creator.nickname}}</view>
+          <view class="iconfont icon-jiankuohaoxiyou" style="color:#F5F5F5;line-height: 73rpx;font-size:35rpx;"></view>
+        </view>
+        <view class="content_description">{{playlist.description!=null?playlist.description:""}}</view>
+      </view>
+    </view>
+
+    <view class="iconMenu_wrap">
+      <view class="menu_item">
+        <view class="iconfont icon-pinglun" style="font-size:60rpx;color:white;margin-left: 10rpx;"></view>
+        <view class="menu_title">{{playlist.commentCount}}</view>
+      </view>
+      <view class="menu_item">
+        <view class="iconfont icon-fenxiang" style="font-size:60rpx;color:white"></view>
+        <view class="menu_title">{{playlist.shareCount}}</view>
+      </view>
+      <view class="menu_item">
+        <view class="iconfont icon-duoxuan" style="font-size:60rpx;color:white"></view>
+        <view class="menu_title">多选</view>
+      </view>
+      <view class="menu_item">
+        <view class="iconfont icon-xiazai" style="font-size:60rpx;color:white"></view>
+        <view class="menu_title">下载</view>
+      </view>
+    </view>
+
+    <view class="songList_wrap">
+      <view class="songList_wrap_title"></view>
+      <view class="songArray_wrap" wx:for="{{}}"></view>
+    </view>
   </view>
 </view>
